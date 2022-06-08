@@ -1,0 +1,227 @@
+.main {
+  position: absolute;
+  margin-top: 16%;
+  margin-left: 6%;
+  text-transform: uppercase;
+}
+
+.main_firstText {
+  font-size: 27px;
+  letter-spacing: 2px;
+  font-family: "DINPro";
+  margin-bottom: 4%;
+}
+
+.main_secondText {
+  position: relative;
+  font-size: 109px;
+  line-height: 117px;
+  letter-spacing: 6px;
+  font-family: "Gilroy-Light";
+  z-index: 3;
+}
+
+.main_boldText {
+  font-family: "Gilroy-Extrabold";
+}
+
+.main_button {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #ff6a9f;
+  border: none;
+  border-radius: 50px;
+  width: 30%;
+  height: 18%;
+  top: 76%;
+  left: 61%
+}
+
+.button_round {
+  background-color: black;
+  background-image: url('../../assets/img/arrow.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 16px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50px;
+  margin-left: 14px;
+  box-shadow: -2px -2px 2px 2px rgba(0, 0, 0, 0.3), 2px 2px 2px 2px rgba(255, 255, 255, 0.3);
+}
+
+.button_text {
+  font-size: 27px;
+  font-family: "DINpro";
+  letter-spacing: 1px;
+  margin-right: 22px;
+}
+
+.spearm1static {
+  position: absolute;
+  top: 6%;
+  left: 40%;
+  width: 58%;
+  height: 100px;
+  background-image: url(../../assets/img/bigSpearm.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: 3;
+}
+
+.spearm2static {
+  position: absolute;
+  top: 102%;
+  left: -6%;
+  width: 58%;
+  height: 120px;
+  background-image: url(../../assets/img/smallSpearm.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.blue1dynamic {
+  position: absolute;
+  top: 114%;
+  left: 50%;
+  width: 300px;
+  height: 120px;
+  background-image: url(../../assets/img/blue5.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  animation: 5s infinite alternate spearm1moves;
+}
+
+.blue2dynamic {
+  position: absolute;
+  top: 14%;
+  left: 84%;
+  width: 100px;
+  height: 110px;
+  background-image: url(../../assets/img/blue3.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  animation: 5s infinite alternate spearm2moves;
+  z-index: 3;
+}
+
+.blue3dynamic {
+  position: absolute;
+  top: -20%;
+  left: 74%;
+  width: 100px;
+  height: 60px;
+  background-image: url(../../assets/img/blue2.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  animation: 5s infinite alternate spearm3moves;
+}
+
+.blue4dynamic {
+  position: absolute;
+  z-index: 1;
+  top: 86%;
+  left: -4%;
+  width: 100px;
+  height: 60px;
+  background-image: url(../../assets/img/blue1.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  animation: 5s infinite alternate spearm4moves;
+}
+
+.blue5static {
+  position: absolute;
+  top: -20%;
+  left: -7%;
+  width: 70%;
+  height: 110px;
+  background-image: url(../../assets/img/blue4.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.blue6static {
+  position: absolute;
+  filter: blur(8px);
+  opacity: 30%;
+  z-index: 1;
+  top: -30%;
+  left: 95%;
+  width: 60px;
+  height: 40px;
+  background-image: url(../../assets/img/blue2.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.blue7static {
+  position: absolute;
+  filter: blur(8px);
+  opacity: 68%;
+  z-index: 1;
+  top: 116%;
+  left: 34%;
+  width: 70px;
+  height: 50px;
+  background-image: url(../../assets/img/blue2.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+/* Animation */
+
+@keyframes spearm1moves {
+  from {
+    top: 114%;
+    left: 50%;
+    width: 300px;
+    height: 120px;
+  }
+
+  to {
+    top: 112%;
+    left: 51%;
+    width: 330px;
+    height: 140px;
+  }
+}
+
+@keyframes spearm2moves {
+  from {
+    top: 10%;
+    left: 84%;
+  }
+
+  to {
+    top: -10%;
+    left: 80%;
+    transform: rotate(30deg);
+  }
+}
+
+@keyframes spearm3moves {
+  from {
+    top: -20%;
+    left: 74%;
+  }
+
+  to {
+    top: -16%;
+    left: 78%;
+  }
+}
+
+@keyframes spearm4moves {
+  from {
+    top: 86%;
+    left: -4%;
+  }
+
+  to {
+    top: 94%;
+    left: 0%;
+  }
+}

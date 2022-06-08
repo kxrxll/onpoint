@@ -1,0 +1,28 @@
+.layout_background {
+  background-image: url('../../assets/img/background.jpg');
+  background-position: left;
+  background-size: cover;
+  height: 100vh;
+}
+
+.layout_controls {
+  background-image: url('../../assets/svg/controls.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  width: 15%;
+  height: 4%;
+  margin-top: 3%;
+  margin-left: 6%;
+}
+
+.layout_logo {
+  background-image: url('../../assets/svg/logo.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  width: 6%;
+  height: 2%;
+  margin-top: 72%;
+  margin-left: 6%;
+}
