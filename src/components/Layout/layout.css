@@ -5,6 +5,19 @@
   height: 100vh;
 }
 
+.onLeft {
+  background-position: left;
+}
+
+.onCenter {
+  background-position: right;
+}
+
+
+.moveBgLeft {
+  animation: 2s ease-in-out slideBackgroundLeft;
+}
+
 .layout_controls {
   background-image: url('../../assets/svg/controls.svg');
   background-repeat: no-repeat;
@@ -25,4 +38,14 @@
   height: 2%;
   margin-top: 72%;
   margin-left: 6%;
+}
+
+@keyframes slideBackgroundLeft {
+  from {
+    background-position: left;
+  }
+
+  to {
+    background-position: center;
+  }
 }

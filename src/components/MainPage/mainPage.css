@@ -5,6 +5,10 @@
   text-transform: uppercase;
 }
 
+.moveLeft {
+  animation: 2s ease-in-out slideLeft;
+}
+
 .main_firstText {
   font-size: 27px;
   letter-spacing: 2px;
@@ -36,7 +40,8 @@
   width: 30%;
   height: 18%;
   top: 76%;
-  left: 61%
+  left: 61%;
+  z-index: 3;
 }
 
 .button_round {
@@ -223,5 +228,15 @@
   to {
     top: 94%;
     left: 0%;
+  }
+}
+
+@keyframes slideLeft {
+  from {
+    right: 0;
+  }
+
+  to {
+    right: 100%;
   }
 }

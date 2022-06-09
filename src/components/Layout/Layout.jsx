@@ -2,18 +2,21 @@ import "./layout.css";
 
 const Layout = (props) => {
 
-  const setPage = props.pageChanger;
+  const {setPage, setSlideLeft, setSlideRight} = props;
 
   let touchstartX = 0
   let touchendX = 0
       
   function checkDirection() {
     if (touchendX < touchstartX) {
-      console.log('Left!');
-      setPage(2);
+      setSlideLeft(true);
+      setTimeout(() => {
+        setPage(2);
+        setSlideLeft(false);
+      }, 2000);
     }
     if (touchendX > touchstartX) {
-      console.log('Right!');
+      setSlideRight(true);
       setPage(1);
     }
   }
@@ -28,7 +31,7 @@ const Layout = (props) => {
   }
 
   return (
-    <div className="layout_background" onTouchStart={handleTouchStart} onTouchEnd={handleTouchEnd}>
+    <div className={setSlideLeft ? "layout_background moveBgLeft" : "layout_background"} onTouchStart={handleTouchStart} onTouchEnd={handleTouchEnd}>
       <nav className="layout_controls" />
       <div className="layout_logo" />
       {props.children}
